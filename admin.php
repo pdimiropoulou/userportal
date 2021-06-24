@@ -57,13 +57,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </style>
 </head>
 <body>
-    <h1 class="my-5">Γεια σας <b><?php echo htmlspecialchars($_SESSION["firstname"] ." " . $_SESSION["lastname"]); ?></b></h1>
-    <table class="center">
+    <h1 class="my-5">Γεια σας <?php echo htmlspecialchars($_SESSION["firstname"] ." " . $_SESSION["lastname"]); ?></h1>
+    <h2><b>Registered Users</b></h2>
+    <table class="table table-striped">
     <tr>
-        <th>User first name</th>
-        <th>User last name</th>
-        <th>User email</th>
-        <th>User type</th>
+        <th scope="col">User first name</th>
+        <th scope="col">User last name</th>
+        <th scope="col">User email</th>
+        <th scope="col">User type</th>
     </tr>
     <?php
     $i = 0;
@@ -78,5 +79,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     }
 ?>
 </table>
+<p>
+        <a href="logout.php" class="btn btn-info">Sign Out of Your Account</a>
+        <a href="applicationform.php" class="btn btn-success">Create User</a>
+    </p>
 </body>
 </html>

@@ -27,23 +27,29 @@ if($_SERVER["REQUEST_METHOD"] != "POST"):
     $returnData = msg(0,404,'Page Not Found!');
 
 // CHECKING EMPTY FIELDS
-elseif(!isset($data->name) 
+elseif(!isset($data->firstname)
+    || !isset($data->lastname)
     || !isset($data->email) 
     || !isset($data->password)
-    || empty(trim($data->name))
+    || !isset($data->type)
+    || empty(trim($data->firstname))
+    || empty(trim($data->lastname))
     || empty(trim($data->email))
     || empty(trim($data->password))
+    || empty(trim($data->type))
     ):
 
-    $fields = ['fields' => ['name','email','password']];
+    $fields = ['fields' => ['firstname','lastname','email','password','type']];
     $returnData = msg(0,422,'Please Fill in all Required Fields!',$fields);
 
 // IF THERE ARE NO EMPTY FIELDS THEN-
 else:
     
-    $name = trim($data->name);
+    $firstname = trim($data->firstname);
+    $lastname = trim($data->lastname);
     $email = trim($data->email);
     $password = trim($data->password);
+    $type = trim($data->type);
 
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)):
         $returnData = msg(0,422,'Invalid Email Address!');
@@ -51,7 +57,7 @@ else:
     elseif(strlen($password) < 8):
         $returnData = msg(0,422,'Your password must be at least 8 characters long!');
 
-    elseif(strlen($name) < 3):
+    elseif(strlen($lastname) < 3):
         $returnData = msg(0,422,'Your name must be at least 3 characters long!');
 
     else:
@@ -66,14 +72,16 @@ else:
                 $returnData = msg(0,422, 'This E-mail already in use!');
             
             else:
-                $insert_query = "INSERT INTO `users`(`name`,`email`,`password`) VALUES(:name,:email,:password)";
+                $insert_query = "INSERT INTO `users`(`firstname`,`lastname`,`email`,`password`,`type`) VALUES(:firstname,:lastname,:email,:password,:type)";
 
                 $insert_stmt = $conn->prepare($insert_query);
 
                 // DATA BINDING
-                $insert_stmt->bindValue(':name', htmlspecialchars(strip_tags($name)),PDO::PARAM_STR);
+                $insert_stmt->bindValue(':firstname', htmlspecialchars(strip_tags($firstname)),PDO::PARAM_STR);
+                $insert_stmt->bindValue(':lastname', htmlspecialchars(strip_tags($lastname)),PDO::PARAM_STR);
                 $insert_stmt->bindValue(':email', $email,PDO::PARAM_STR);
                 $insert_stmt->bindValue(':password', password_hash($password, PASSWORD_DEFAULT),PDO::PARAM_STR);
+                $insert_stmt->bindValue(':type', $type,PDO::PARAM_STR);
 
                 $insert_stmt->execute();
 

@@ -54,12 +54,12 @@ class Application{
         $stmt->bindParam(":vacation_end_date", $this->vacation_end_date);
         $stmt->bindParam(":reason", $this->reason);
         $stmt->bindParam(":user_id", $this->user_id);
-
         // execute query
         if($stmt->execute()){
-        return true;
+          //  $LAST_ID = $this->conn->lastInsertId();
+        //echo ($LAST_ID);
+         return true;
         }
-
         return false;
 
     }

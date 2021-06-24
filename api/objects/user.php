@@ -61,24 +61,18 @@ class User{
     }
     
     //get by id
-    function getOne(){
+    function getOne($userid){
         $query = "SELECT
                      id, firstname, lastname, email, type
                     FROM
                     " . $this->table_name . "
                     WHERE
-                    p.id = ? LIMIT 0,1";
+                    p.id = ? LIMIT 1";
         $stmt = $this->conn->prepare( $query );
-        $stmt->bindParam(1, $this->id);
+        $stmt->bindParam(1, $this->$userid);
         $stmt->execute();
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        // set values to object properties
-        $this->id = $row['id'];
-        $this->firstname = $row['firstname'];
-        $this->lastname = $row['lastname'];
-        $this->email = $row['email'];
-        $this->type = $row['type'];
+        
+        return $stmt;
     }
 }  
 

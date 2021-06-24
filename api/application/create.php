@@ -19,12 +19,13 @@ if(!empty($data->vacation_start_date) &&!empty($data->vacation_end_date) &&!empt
         $application->vacation_end_date = $data->vacation_end_date ;
         $application->reason = $data->reason;
         $application->user_id = $data->user_id;
-        // $application->created = date('Y-m-d H:i:s');
-    
+
         // create the application
         if($application->create()){
             http_response_code(201);
             echo json_encode(array("message" => "application was created."));
+            //$data = [ 'message' => 'application was created', 'id' => -1 ];
+            
         }
         else{
             http_response_code(503);
