@@ -10,8 +10,12 @@ balances) are stored within the portal.
 ## Installation
 You need to install the followings in order to run this repository:
 - XAMMP 7.4.20  
+    OR
+- Apache
 - PHP 7.4.20
 - MariaDB 10.4.19
+
+
 Put project folder under xammp/htdocs
 
 ## User Navigation
