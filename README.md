@@ -37,7 +37,7 @@ back to the list of applications.
 ![Alt text](/screenshots/empemail.JPG?raw=true)
 
 - The administrator welcome page has an editable list of users, a create button and a sign out button.
-- 
+
 ![Alt text](/screenshots/adm_welcome.JPG?raw=true)
 - By pressing create user button the folllowing form appears for a new user.
 
