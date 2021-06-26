@@ -53,7 +53,7 @@ only this time all fields are pre-populated. The administrator can change the us
 Additions for future work:
 - Date validation on application form --> End date cannot be start date.
 - Email validation on create user form --> Check that email format is valid.
-- Create a 1:M table between  administrators and employees and retrieve supervisor email from the employee which submits the application.
+- Create 1:M table between  administrators and employees and retrieve supervisor email from the employee which submits the application.
 
 ## Email Setup
 In this implementation Gmail setup is used for sending notifications. In order to achieve this the following configuration is needed:
