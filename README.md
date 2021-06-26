@@ -37,7 +37,7 @@ back to the list of applications.
 ![Alt text](/screenshots/empemail.JPG?raw=true)
 
 - The administrator welcome page has an editable list of users, a create button and a sign out button.
-
+- 
 ![Alt text](/screenshots/adm_welcome.JPG?raw=true)
 - By pressing create user button the folllowing form appears for a new user.
 
@@ -50,3 +50,17 @@ only this time all fields are pre-populated. The administrator can change the us
 ![Alt text](/screenshots/udpateuser.JPG?raw=true)
 
 ## Enhancements
+Additions for future work:
+- Date validation on application form --> End date cannot be start date.
+- Email validation on create user form --> Check that email format is valid.
+- Create a 1:M table between  administrators and employees and retrieve supervisor email from the employee which submits the application.
+
+## Email Setup
+In this implementation Gmail setup is used for sending notifications. In order to achieve this the following configuration is needed:
+- In \xampp\php\php.ini file find [mail function] and change
+
+![Alt text](/screenshots/php.JPG?raw=true)
+- Open \xampp\sendmail\sendmail.ini. Replace all the existing code in sendmail.ini with following code.
+
+![Alt text](/screenshots/sendemail.JPG?raw=true)
+- Go to your Gmail account under Security tab and allow Less secure app access.
