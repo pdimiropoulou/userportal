@@ -56,11 +56,9 @@ class Application{
         $stmt->bindParam(":user_id", $this->user_id);
         // execute query
         if($stmt->execute()){
-          //  $LAST_ID = $this->conn->lastInsertId();
-        //echo ($LAST_ID);
-         return true;
+            return true;
         }
-        return false;
+            return false;
 
     }
 

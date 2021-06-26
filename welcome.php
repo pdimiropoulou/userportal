@@ -9,9 +9,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
 
 //API call
-$data_array =  array(
-    "userid"    => $_SESSION["id"]
-    );
+    $data_array =  array(
+        "userid"    => $_SESSION["id"]
+        );
     $make_call = callAPI('GET', 'http://localhost/epignosisproject/api/application/getapplications.php', $data_array);
     $response = json_decode($make_call, true);
     
@@ -31,7 +31,7 @@ $data_array =  array(
     </style>
 </head>
 <body>
-    <h1 class="my-5">Γεια σας <?php echo htmlspecialchars($_SESSION["firstname"] ." " . $_SESSION["lastname"]); ?></h1>
+    <h1 class="my-5">Hello <?php echo htmlspecialchars($_SESSION["firstname"] ." " . $_SESSION["lastname"]); ?></h1>
     <h2><b>Your Applications</b></h2>
     <table class="table table-striped">
     <tr>
@@ -56,7 +56,7 @@ $data_array =  array(
 </table>
     <p>
         <a href="logout.php" class="btn btn-info">Sign Out of Your Account</a>
-        <a href="applicationform.php" class="btn btn-success">Submit Request</a>
+        <a href="applicationform.html" class="btn btn-success">Submit Request</a>
     </p>
     <div>
 

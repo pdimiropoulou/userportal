@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 24, 2021 at 11:24 AM
+-- Generation Time: Jun 26, 2021 at 01:28 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.20
 
@@ -43,8 +43,9 @@ CREATE TABLE `applications` (
 --
 
 INSERT INTO `applications` (`id`, `created_at`, `vacation_start_date`, `vacation_end_date`, `days`, `status`, `reason`, `user_id`) VALUES
-(11, '2021-06-22 10:16:49', '2021-06-25', '2021-06-26', 0, 'Rejected', 'test api', 6),
-(12, '2021-06-22 21:30:34', '2021-06-28', '2021-06-29', 0, 'Pending', 'test api', 6);
+(91, '2021-06-26 11:18:22', '2021-06-28', '2021-06-30', 0, 'Rejected', 'Summer Vacations', 20),
+(92, '2021-06-26 11:21:14', '2021-07-05', '2021-07-08', 0, 'Approved', 'summer vacations', 20),
+(93, '2021-06-26 11:27:36', '2021-08-05', '2021-08-06', 0, 'Pending', 'trainnig', 22);
 
 -- --------------------------------------------------------
 
@@ -67,11 +68,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `firstname`, `lastname`, `type`) VALUES
-(6, 'Polina', 'sousourax@yahoo.com', '$2y$10$ZwCvY9CTjBbt9zTpcVB7SOiPNxH8vocC7ZBnXTYb6ATLMptUIZny6', 'Πολύνα', 'Δημηροπούλου', 'employee'),
-(8, '', 'sousouraxs@yahoo.com', '12345678', 'Μαρία', 'Παπαδοπούλου', 'Employee'),
-(9, '', 'sousou4raxs@yahoo.com', '$2y$10$ZwCvY9CTjBbt9zTpcVB7SOiPNxH8vocC7ZBnXTYb6ATLMptUIZny6', 'Μαρία', 'Παπαδοπούλου', 'Employee'),
-(11, '', 'ooo@yahoo.com', '12345678', 'Μαρία', 'Παπαδοπούλου', 'Employee'),
-(13, '', 'ssdsd@yahoo.com', '$2y$10$ZwCvY9CTjBbt9zTpcVB7SOiPNxH8vocC7ZBnXTYb6ATLMptUIZny6', 'Μαρία', 'Παπαδοπούλου', 'Administrator');
+(20, '', 'sousourax@yahoo.com', '$2y$10$xhLvEZPP1hcc9mFSfTArQugTQHxn.cmYgEm9vwlmLoFzxheXJP21a', 'Polina', 'Dimiropoulou', 'Employee'),
+(21, '', 'polina.dimiropoulou@gmail.com', '$2y$10$6n02tF6LkNb1bUxsWyR6leyScnnXQFczBuf08ITvf2t1K6kz8Qnm6', 'Maria', 'Papadopoulou', 'Administrator'),
+(22, '', 'eleni.oikonomou@mail.com', '$2y$10$vmJOOviT3XLh4pZ2zIukheAzjAJTNuuHe.SVX5f1TpuY1cqYLFcLa', 'Eleni', 'Oikonomou', 'Employee');
 
 --
 -- Indexes for dumped tables
@@ -99,13 +98,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `applications`
 --
 ALTER TABLE `applications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- Constraints for dumped tables

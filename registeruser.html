@@ -1,0 +1,33 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="styles/register.css">
+</head>
+<body>
+
+    <form action="createuser.php" method="POST">
+  
+    <h1>New User</h1>
+    
+    <fieldset>
+      <label for="firstname">First Name:</label>
+      <input type="text" id="firstname" name="firstname">
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="lastname" name="lastname">
+      <label for="mail">Email:</label>
+      <input type="email" id="mail" name="mail">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <label for="rpassword">Retype Password:</label>
+      <input type="password" id="rpassword" name="rpassword">
+    <label for="type">User Type:</label>
+    <select id="type" name="type">
+        <option value="Employee">Employee</option>
+        <option value="Administrator">Administrator</option>
+    </select>
+    <button type="submit"  name="submit">Create</button>
+  </form>
+  
+</body>
+</html>

@@ -1,7 +1,6 @@
 <?php
 session_start();
 include_once 'callapi.php';
-//include_once 'sendemail.php';
 
 if (isset($_POST['submit'])) {
     if (isset($_POST['vacation_start']) && isset($_POST['vacation_end']) &&
@@ -28,11 +27,11 @@ if (isset($_POST['submit'])) {
                // var_dump($response);
             }
             else{
-                header("location: applicationform.php");
+                header("location: applicationform.html");
             }
     }
     else {
-        header("location: applicationform.php");
+        header("location: applicationform.html");
      //   die();
     }
 }
