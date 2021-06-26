@@ -53,6 +53,7 @@ only this time all fields are pre-populated. The administrator can change the us
 Additions for future work:
 - Date validation on application form --> End date cannot be start date.
 - Email validation on create user form --> Check that email format is valid.
+- Password validation on create user form --> Check that password and retype password are the same.
 - Create a 1:M table between  administrators and employees and retrieve supervisor email from the employee which submits the application.
 
 ## Email Setup
