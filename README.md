@@ -16,11 +16,22 @@ You can find a database dumb file with sample data [here](demo.sql).
 ## Email Setup
 In this implementation Gmail setup is used for sending notifications. In order to achieve this the following configuration is needed:
 - In `\xampp\php\php.ini` file find `[mail function]` and change
-
-![Alt text](/screenshots/php.JPG?raw=true)
+###
+    SMTP=smtp.gmail.com
+    smtp_port=587
+    sendmail_from = YourGmailId@gmail.com
+    sendmail_path = "..\xampp\sendmail\sendmail.exe\" -t"
+    
 - Open `\xampp\sendmail\sendmail.ini`. Replace all the existing code in `sendmail.ini` with the following code.
+###
+    smtp_server=smtp.gmail.com
+    smtp_port=587 or 25 //use any of them
+    error_logfile=error.log
+    debug_logfile=debug.log
+    auth_username=YourGmailId@gmail.com
+    auth_password=Your-Gmail-Password
+    force_sender=YourGmailId@gmail.com(optional)
 
-![Alt text](/screenshots/sendemail.JPG?raw=true)
 - Go to your Gmail account under Security tab and allow Less secure app access.
 
 ## Documentation
