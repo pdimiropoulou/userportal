@@ -52,7 +52,7 @@ The REST API to the example app is described below.
 
 ### Request
 
-`GET api/application/getapplications.php/userid`
+`GET /api/application/getapplications.php/userid`
 
     curl --location --request GET 'http://localhost/userportal/api/application/getapplications.php?userid=20'
 
@@ -176,6 +176,28 @@ The REST API to the example app is described below.
     ]
 }
 
+## Get user details
+
+### Request
+
+`GET /api/user/getuserbyid.php?id=20`
+
+    curl --location --request GET 'http://localhost/userportal/api/user/getuserbyid.php?id=20'
+
+### Response
+
+    {
+    "users": [
+        {
+            "id": "20",
+            "firstname": "Polina",
+            "lastname": "Dimiropoulou",
+            "email": "sousourax@yahoo.com",
+            "type": "Employee"
+        }
+    ]
+    }
+    
 ## Create a new user
 
 ### Request
