@@ -286,7 +286,9 @@ only this time all fields are pre-populated. The administrator can change the us
 ## Enhancements
 Additions for future work:
 - Date validation on application form --> End date cannot be previous to start date.
+- Email validation on create user form --> Check that email doesn't exist.
 - Email validation on create user form --> Check that email format is valid.
+- Password validation on create user form --> Check that password format is valid.
 - Password validation on create user form --> Check that password and retype password are the same.
 - Use token returned from login api.
 - Create a 1:M table between  administrators and employees and retrieve supervisor email from the employee which submits the application.

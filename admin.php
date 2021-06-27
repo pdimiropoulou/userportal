@@ -9,7 +9,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
 
     //API call
-    $make_call = callAPI('GET', 'http://localhost/epignosisproject/api/user/getusers.php',"");
+    $make_call = callAPI('GET', 'http://localhost/userportal/api/user/getusers.php',"");
     $response = json_decode($make_call, true);
 
 ?>
@@ -51,7 +51,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     if(array_key_exists('users', $response)){
         foreach ($response["users"]  as $r) {
             echo "<tr>";
-            echo "<td>" . $r['firstname'] . "</td><td>" . $r['lastname'] . "</td><td>" . $r['email'] . "</td><td>" . $r['type'] . "</td> <td><a href=https://localhost/epignosisproject/getuser.php?userid=". $r['id'] .">Edit</a></td> ";
+            echo "<td>" . $r['firstname'] . "</td><td>" . $r['lastname'] . "</td><td>" . $r['email'] . "</td><td>" . $r['type'] . "</td> <td><a href=https://localhost/userportal/getuser.php?userid=". $r['id'] .">Edit</a></td> ";
             echo "</tr>";
 
             $i++;

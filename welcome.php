@@ -12,7 +12,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     $data_array =  array(
         "userid"    => $_SESSION["id"]
         );
-    $make_call = callAPI('GET', 'http://localhost/epignosisproject/api/application/getapplications.php', $data_array);
+    $make_call = callAPI('GET', 'http://localhost/userportal/api/application/getapplications.php', $data_array);
     $response = json_decode($make_call, true);
     
     //var_dump( $response["applications"][0]);

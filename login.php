@@ -36,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         "email"    => $email,
         "password" => $password
         );
-        $make_call = callAPI('POST', 'http://localhost/epignosisproject/login-registration-api/login.php', json_encode($data_array));
+        $make_call = callAPI('POST', 'http://localhost/userportal/login-registration-api/login.php', json_encode($data_array));
         $response = json_decode($make_call, true);
        
         if ($response["success"] === 1){

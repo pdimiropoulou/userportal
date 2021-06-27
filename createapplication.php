@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
             "reason"    => $reason,
             "user_id"    =>  $_SESSION["id"],
             );
-            $make_call = callAPI('POST', 'http://localhost/epignosisproject/api/application/create.php', json_encode($data_array));
+            $make_call = callAPI('POST', 'http://localhost/userportal/api/application/create.php', json_encode($data_array));
             $response = json_decode($make_call, true);
             
             if($response["message"]==="application was created."){

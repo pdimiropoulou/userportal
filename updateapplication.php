@@ -6,7 +6,7 @@ $data_array =  array(
     "id"    => $_GET['id'],
     "status" => $_GET['status']
     );
-    $make_call = callAPI('POST', 'http://localhost/epignosisproject/api/application/update.php', json_encode($data_array));
+    $make_call = callAPI('POST', 'http://localhost/userportal/api/application/update.php', json_encode($data_array));
     $response = json_decode($make_call, true);
 
     if($response["message"]==="application was updated."){

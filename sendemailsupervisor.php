@@ -20,7 +20,7 @@
    $body = "<p> Dear supervisor, employee <b>". $_SESSION["firstname"] ." " . $_SESSION["lastname"] ." </b> requested for some time off, starting on <b> {$start_date} </b> 
    and ending on <b> {$end_date} </b>, stating the reason: <b> {$reason} </b> </p>
    <p> Click on one of the below links to approve or reject the application:
-   <a href =http://localhost/epignosisproject/updateapplication.php?id={$id}&status=Approved&userid={$_SESSION["id"]}>Approve</a> -  <a href =http://localhost/epignosisproject/updateapplication.php?id={$id}&status=Rejected&userid={$_SESSION["id"]}>Reject</a> </p>"; 
+   <a href =http://localhost/userportal/updateapplication.php?id={$id}&status=Approved&userid={$_SESSION["id"]}>Approve</a> -  <a href =http://localhost/userportal/updateapplication.php?id={$id}&status=Rejected&userid={$_SESSION["id"]}>Reject</a> </p>"; 
    $headers = "MIME-Version: 1.0" . "\r\n";
    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
    $headers .= 'From: polina.dimiropoulou@gmail.com' . "\r\n";
