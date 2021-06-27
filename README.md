@@ -226,7 +226,7 @@ The REST API to the example app is described below.
     }
 
 
-## User Navigation
+# User Navigation
 - Visit  https://localhost/userportal/login.php in order to login in the portal by providing email and password.
 
 ![Alt text](/screenshots/login.JPG?raw=true )
