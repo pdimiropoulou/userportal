@@ -27,7 +27,6 @@ In this implementation Gmail setup is used for sending notifications. In order t
 - [API Documentation](/docs/api.md)
 - [User Manual](/docs/user_manual.md)
 - [Database Schema](/docs/databaseschema.pdf)
-- [Database Dump File](/demo.sql)
 
 ## Enhancements
 Additions for future work:
