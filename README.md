@@ -302,5 +302,5 @@ In this implementation Gmail setup is used for sending notifications. In order t
 - Go to your Gmail account under Security tab and allow Less secure app access.
 
 ## Database
-In this reposiotry you can find the database schema and diagram at https://github.com/pdimiropoulou/userportal/blob/main/databaseschema.pdf 
-and a dumb file of the database at https://github.com/pdimiropoulou/userportal/blob/main/demo.sql
+In this reposiotry you can find the database schema /diagram at https://github.com/pdimiropoulou/userportal/blob/main/databaseschema.pdf 
+and a dumb file of the database with sample data at https://github.com/pdimiropoulou/userportal/blob/main/demo.sql
