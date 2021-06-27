@@ -292,6 +292,8 @@ Additions for future work:
 - Password validation on create user form --> Check that password and retype password are the same.
 - Use token returned from login api.
 - Create a 1:M table between  administrators and employees and retrieve supervisor email from the employee which submits the application.
+- Send email notifications asyncronous.
+- Send a reminder email to the supervisor after two days, if application was not accepted/rejected from supervisor.
 
 ## Email Setup
 In this implementation Gmail setup is used for sending notifications. In order to achieve this the following configuration is needed:
